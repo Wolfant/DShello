@@ -12,7 +12,6 @@ def create_app(config_name):
     @app.route('/hello/<string:name>', methods=['GET'])
     def appEndPoint(name, **kwargs):
         if request.method == "GET":
-            print 'here'
             if name:
                 response = jsonify({
                     'message': "Hello {}".format(name)

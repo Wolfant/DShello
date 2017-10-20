@@ -6,7 +6,7 @@ from instance.config import app_config
 from rest import create_app
 
 # config_name = "development"
-config_name = os.getenv('APP_SETTINGS','development')
+config_name = os.getenv('APP_SETTINGS','production')
 app = create_app(config_name)
 
 if __name__ == '__main__':
