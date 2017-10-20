@@ -1,0 +1,34 @@
+sudo: false
+language: python
+
+matrix:
+  include:
+    - python: 3.6
+      env: TOXENV=py,codecov
+    - python: 3.5
+      env: TOXENV=py,codecov
+    - python: 3.4
+      env: TOXENV=py,codecov
+    - python: 3.3
+      env: TOXENV=py,codecov
+    - python: 2.7
+      env: TOXENV=py,codecov
+    - python: 2.6
+      env: TOXENV=py,codecov
+
+install:
+  - pip install
+
+script:
+  - python test_app.py
+
+cache:
+  - pip
+
+deploy:
+  - provider: heroku
+    app: devsu-tst
+    on:
+      branch: master
+    api_key:
+      secure: UoUmmt+zqIwAj8Fb9XPh8ApTsioAuZCeeSKOsTOGytyP2f20un+Mx+Qih/piDirhMf5KUUSTaqsG3EsM7Uear4/BeXEf3+jtlI9KkRIziB1C7PLPeH1cbPYd0UDpHIBeEi7chju890RIYgp6bMU7SKMfnnJUKUX6Zbj3Ms7fYSMl9wtE1vbbRvplGGNCYJ1uavQL7cAq1SUz98EvKjXdbR9j28+RdrPfI827gryLcyZzeK36VHqqrbCYy3RHFpk6ka+mIR9KFollCLvuzYZXNIiKVHJvwPfM+3VPuiO0yDkNhsSWEnAKTrYM1pH+lnG++i2prfcVsvIUn625H1ce6OKho+iPfyNm1A6GCRHFKIVj17EFfQOcP4U6Y4PvfVcZmGX68zs9Rs9a1PjJwcF+5zyugD5bIt8S/cNsXivEiJ+BAVHEF/v6Ncfh1cTJqpV02qMi6ZoXby8cKF3ydyRl/61ccrLuSpGXcHvK3P/X202TtvQ+SM0Vmi8afC6BHlH5GyGhyU5k9iE7PTem1/f/fkTj1OS2i166fY5H0tBIx9HvzP3R2GoeofNswDzH9otgo8xDEPg21CDsLJ8ZVlxaFxVvN1mv2eUNGKKcBrmBmloKK/siZ9vQisO7oWgl3xqKRitfBcYzjr2xdnQK63gb2mxDGjF4YyM4A26M5DVjgOw=
