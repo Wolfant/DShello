@@ -1,0 +1,12 @@
+
+{
+  "name": "DevSu Example",
+  "description": "A  Flask app on Heroku",
+  "keywords": [
+    "flask",
+    "python",
+    "sample"
+  ],
+  "repository": "https://github.com/Wolfant/DShello.git",
+
+}
