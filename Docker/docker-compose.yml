@@ -17,6 +17,7 @@ services:
         - "5000"
 
   proxy:
+    container_name: nginx
     cap_add:
       - ALL
       - SYS_ADMIN
