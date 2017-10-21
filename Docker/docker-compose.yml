@@ -1,13 +1,28 @@
 version: '2'
-
 services:
   app:
+    container_name: app
     build:
       context:  ./app1
       dockerfile: Dockerfile
     expose:
-      - "5000"
+        - "5000"
+
+  app2:
+    container_name: app2
+    build:
+      context:  ./app1
+      dockerfile: Dockerfile
+    expose:
+        - "5000"
+
   proxy:
+    cap_add:
+      - ALL
+      - SYS_ADMIN
+      - NET_ADMIN
+      - NET_BIND_SERVICE
+      - NET_BROADCAST
     build:
       context:  ./nginx
       dockerfile: Dockerfile
@@ -15,3 +30,4 @@ services:
       - "80:80"
     links:
       - app
+      - app2
