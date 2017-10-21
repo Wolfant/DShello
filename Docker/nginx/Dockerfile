@@ -13,6 +13,6 @@ rm -f /lib/systemd/system/basic.target.wants/*;\
 rm -f /lib/systemd/system/anaconda.target.wants/*;
 RUN cd /opt/ ; git clone https://github.com/Wolfant/DShello.git
 RUN cp /opt/DShello/Docker/nginx/nginx.conf /etc/nginx/nginx.conf
-RUN /usr/sbin/nginx
+#RUN /usr/sbin/nginx
 CMD ["/bin/bash"]
 EXPOSE 80
