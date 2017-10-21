@@ -14,5 +14,4 @@ deploy:
   api_key:
     secure: hICDlamg2gqiIgwLMpaO1H+Q+oTxGb+t++q6rxi4VcbvyBLXMb2urO+NMbzEbMAhqEiKLW9Ug15FNO32NIr6iF8gSoQz+MjKAT836EePhRfePZEzkryDnSqya9aFJPe6Erd8/i09ZjIhTr3I/agsM0k4TpKsxQgYke/ojJZ96YtGlerLSd9T0z9kin+Ia8nsiXG3P4kxr2La4wP8zD12+VsLM1C3cxgZ5naHf3IuEjYbBU2gLEesPAaO+7ku1bf7wosI0EQf+mQH3QsawlsI2RX7bJObHw9bRjYaYeanpPl+/GalPDrigNFdfFP7EgL//hD7cIW3a3tPOqdbyD1fOUAhEJuJNuxEgvz5sF50N+xDGPKCeFS0OFhSTLtuYDGyIkF+esOdAzY/dlY3Gj4ZsAS5MTUXDVgrTTDWivsrIAFcdVQWdZ0kKfe7xvhCygNOzRQS3bA6kKXk24ToBHtA4EfBy9KLEus2OHza3V+MBVLxHnTP07Ar/DbDRz8Vtg0Cn1JKz1ja7TR37WUdl1WJ/6z6iv9sY2/5GJYlWe0Rm+fMxh8NBIQZtluLFdlPRESASAy8BvkVhcsWRi1iUKyUpwEOAgkcuQgBktVtvyfqiRRy3ZbEWR4xfV9RYicwqpA9E5s7TWSduCGHdxVQIklYe+L9juBgvQ52nXXkcW4MNKI=
   app: devsu-tst
-  on:
-    repo: Wolfant/DShello
+  on: master
