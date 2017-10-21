@@ -1,4 +1,4 @@
-version: '2'
+version: '2.1'
 services:
   app1:
     container_name: app1
@@ -6,7 +6,9 @@ services:
       context:  ./app1
       dockerfile: Dockerfile
     expose:
-        - "5000"
+      - "5000"
+    ports:
+      - '5000:5000'
 
   app2:
     container_name: app2
@@ -15,6 +17,8 @@ services:
       dockerfile: Dockerfile
     expose:
         - "5000"
+    ports:
+      - '5001:5000'
 
   proxy:
     container_name: nginx
@@ -22,7 +26,4 @@ services:
       context:  ./nginx
       dockerfile: Dockerfile
     ports:
-      - "80:80"
-    links:
-      - app1
-      - app2
+      - "8080:80"
