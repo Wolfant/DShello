@@ -1,3 +1,11 @@
+# Informe Experto IT + DEVOPS
+
+## Creación de Aplicacion
+
+La aplicacione se creo siguiendo TDD con Python y Flask 
+
+
+
 # DShello
 Prueba DS
 
